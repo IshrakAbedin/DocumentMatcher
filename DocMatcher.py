@@ -9,8 +9,13 @@ helptext = 'Keep your documents inside Dir folder. Type in just the name of the 
 helpwords = ['h', 'H', 'help', '-h', '-H', '-help', '--h', '--H', '--help',]
 if len(argv) < 2 or len(argv) > 2:
     print('Type \'-h or -help\' to get help')
+    print('\nPress any key to exit ... ...')
+    input()
+    exit()
 elif argv[1] in helpwords:
     print(helptext)
+    print('\nPress any key to exit ... ...')
+    input()
 
 target = argv[1]
 
@@ -29,6 +34,8 @@ for file in listdir(path):
 
 if target not in files:
     print('Cannot find the file ', target)
+    print('\nPress any key to exit ... ...')
+    input()
     exit()
 
 filecount = len(files)
